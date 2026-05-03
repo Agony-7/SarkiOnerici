@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongMates - Şarkı Önerici</title>
+    <!-- Modern Yazı Tipi (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- İkonlar için FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header class="glass-panel">
+            <h1><i class="fas fa-music music-icon"></i> SongMates</h1>
+            <p>Sevdiğin şarkıyı yaz, benzerlerini anında keşfet.</p>
+            
+            <div class="search-box">
+                <input type="text" id="songInput" placeholder="Örn: Duman - Belki Alışman Lazım" autocomplete="off">
+                <button id="searchBtn" onclick="getRecommendations()">
+                    <i class="fas fa-search"></i> Keşfet
+                </button>
+            </div>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Şarkılar taranıyor...</p>
+            </div>
+            <div id="error-message" class="hidden error"></div>
+        </header>
+
+        <section id="results-section" class="hidden">
+            <div class="seed-info glass-panel">
+                <h3>Aranan Şarkı:</h3>
+                <div id="seed-song-display" class="song-display">
+                    <!-- Dinamik olarak doldurulacak -->
+                </div>
+            </div>
+
+            <h2 class="section-title">Senin İçin Önerilenler</h2>
+            <div id="recommendations-grid" class="grid-container">
+                <!-- Öneri kartları buraya gelecek -->
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

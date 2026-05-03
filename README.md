@@ -1,4 +1,5 @@
 # SongMates - Şarkı Öneri Uygulaması 🎧
+🚀 **Canlı Demo:** [Buraya Tıklayarak Uygulamayı Deneyebilirsiniz](https://sarkionerici.onrender.com)
 
 Bu proje, Yönetim Bilişim Sistemleri (YBS) dersi için hazırlanmış, **Flask** ve **Deezer API** kullanılarak geliştirilmiş modern bir şarkı önerme web uygulamasıdır. 
 
